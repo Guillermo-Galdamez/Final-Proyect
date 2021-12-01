@@ -11,7 +11,6 @@ var posts = [];
 const Admin = () => {
   const context = useUserContext();
   const [renderPosts, setRenderPosts] = useState([]);
-  //const [page, setPage] = useState(0);
   const observer = useRef(
     new IntersectionObserver(
       entries => {
@@ -61,7 +60,7 @@ const Admin = () => {
       }
 
     return (
-        <div className="min-h-screen  h-full bg-scroll bg-repeat bg-purple-400  grid grid-cols-6">
+        <div className="min-h-screen  h-full bg-scroll bg-repeat bg-gradient-to-r from-yellow-300 to-blue-500 grid grid-cols-6">
             <Navbar/>
             <div className="col-start-1 col-span-6 sm:col-start-2 sm:col-span-4 xl:col-start-3 xl:col-span-2">
                 <NewPost /> 
@@ -76,26 +75,26 @@ const Admin = () => {
                 }
                 </div>
                 
-                <div class="border border-purple-300 shadow rounded-md p-4  w-full mx-auto mt-3">
+                <div class="border border-green-300 shadow rounded-md p-4  w-full mx-auto mt-3">
                   <div class="animate-pulse flex space-x-4">
-                    <div class="rounded-full bg-purple-700 h-12 w-12"></div>
+                    <div class="rounded-full bg-indigo-700 h-12 w-12"></div>
                     <div class="flex-1 space-y-4 py-1">
-                      <div class="h-4 bg-purple-700 rounded w-3/4"></div>
+                      <div class="h-4 bg-indigo-700 rounded w-3/4"></div>
                       <div class="space-y-2">
-                        <div class="h-4 bg-purple-700 rounded"></div>
-                        <div class="h-4 bg-purple-700 rounded w-5/6"></div>
+                        <div class="h-4 bg-pindigo-700 rounded"></div>
+                        <div class="h-4 bg-indigo-700 rounded w-5/6"></div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div ref={setElement} class="border  border-purple-300 shadow rounded-md p-4  w-full mx-auto mt-3">
+                <div ref={setElement} class="border  border-blue-300 shadow rounded-md p-4  w-full mx-auto mt-3">
                   <div class="animate-pulse flex space-x-4">
-                    <div class="rounded-full bg-purple-700 h-12 w-12"></div>
+                    <div class="rounded-full bg-indigo-700 h-12 w-12"></div>
                     <div class="flex-1 space-y-4 py-1">
                       <div class="h-4 bg-purple-700 rounded w-3/4"></div>
                       <div class="space-y-2">
-                        <div class="h-4 bg-purple-700 rounded"></div>
-                        <div class="h-4 bg-purple-700 rounded w-5/6"></div>
+                        <div class="h-4 bg-green-700 rounded"></div>
+                        <div class="h-4 bg-green-700 rounded w-5/6"></div>
                       </div>
                     </div>
                   </div>

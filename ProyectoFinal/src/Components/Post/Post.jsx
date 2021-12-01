@@ -20,15 +20,12 @@ const Post = ({post}) => {
     useEffect(() => {
         
         post.likes.map(user => {
-            //console.log(context.user)
             if(user.username == context.user.username){
                 setIconLike(<FavoriteIcon className=" text-red-500" fontSize="large"/>)
             }
         })
         
-     }, []);
-
-    const {register, errors, handleSubmit} = useForm();
+    }, []);
 
     const onSubmitHandler = (data, e) =>{
         console.log(data);
@@ -39,7 +36,6 @@ const Post = ({post}) => {
         const response = await useUserServices.patchLike(post._id ,token) 
         console.log(response)
         console.log(response.data)
-       // console.log(iconLike)
         iconLike.type.type.render.displayName === "FavoriteIcon"? setIconLike(<FavoriteBorderIcon className=" text-red-400 hover:text-red-500" fontSize="large"/>):setIconLike(<FavoriteIcon className=" text-red-500" fontSize="large"/>)
     }
 
@@ -78,5 +74,6 @@ const Post = ({post}) => {
             </div>
     );
 };
+
 
 export default Post;

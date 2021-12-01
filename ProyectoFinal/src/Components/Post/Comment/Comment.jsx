@@ -21,22 +21,22 @@ const Comment = ({comments, id}) => {
     }
     
     const onMouseEnterLikeHandler = () => {
-        setSend(<SendIcon className="text-purple-900" fontSize="large"/>)
+        setSend(<SendIcon className="text-red-600" fontSize="large"/>)
     } 
 
     const onMouseLeaveLikeHandler = () => {
-        setSend(<SendOutlinedIcon  className="text-purple-900" fontSize="large"/>)
+        setSend(<SendOutlinedIcon  className="text-red-600" fontSize="large"/>)
     }  
 
     return (
         <div>
             <div className="w-full h-20 overflow-auto p-2 pt-2  bg-red-400">{
-                  comments.map( comment => {
-                  return <p>{`${comment.user.username}: ${comment.description}`}</p>
+                comments.map( comment => {
+                return <p>{`${comment.user.username}: ${comment.description}`}</p>
                 })
                 }</div>
             <form onSubmit={handleSubmit(onSubmitHandler)} className="w-full h-16 flex flex-row justify-between items-center ">
-                <input name="comment" className="w-4/5 h-8 ml-6 px-4 rounded-full border border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Tengo que decir ..."  {...register("description")}/>
+                <input name="comment" className="w-4/5 h-8 ml-6 px-4 rounded-full border border-transparent focus:outline-none focus:ring-2 focus:ring-gray-600 focus:border-transparent" placeholder="Tengo que decir ..."  {...register("description")}/>
                 <button type="submit" onMouseEnter={onMouseEnterLikeHandler} onMouseLeave={onMouseLeaveLikeHandler} className="mr-6 " id="send">{send}</button>
             </form>
         </div>

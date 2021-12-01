@@ -14,8 +14,7 @@ const ViewPost = () => {
             const response = await useAdminServices.ownedPosts(filters, token)
             console.log(response.data);
             setRenderPosts(response.data)
-            //posts = posts.concat( response.data)
-               
+            
               } catch (error) {
                 console.error(error);
               }

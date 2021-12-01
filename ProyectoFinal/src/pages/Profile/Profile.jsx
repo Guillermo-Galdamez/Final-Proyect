@@ -12,7 +12,7 @@ import {Link} from "react-router-dom";
 const Profile = () => {
 
     return (
-        <div className="  bg-purple-500 flex flex-col items-center ">
+        <div className="  bg-blue-500 flex flex-col items-center ">
             <Navbar/>
             <div className=" mt-20 mb-20  w-6/12 flex flex-col  bg-green-400" >
                 <div className="h-10/12 col-start-2 col-span-4 bg-yellow-400  ">

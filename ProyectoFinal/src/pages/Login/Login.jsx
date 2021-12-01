@@ -4,7 +4,7 @@ import Button from "../../Components/Button";
 import Input from "../../Components/Input";
 import SplashImage from "../../Components/SplashImage";
 import Title from "../../Components/Title";
-import { useUserContext } from "../../../Contexts/UserContext";
+import { useUserContext } from "../../Contexts/UserContext";
 
 const Login = () => {
     
@@ -16,7 +16,6 @@ const Login = () => {
     const [passwordInput, setPasswordInput] = useState("");
     const [error, setError] = useState(false);
 
-    // Se va guardando cada caracter que ingresamos al input
     const onChangeHandler = (e, save) => {
         save(e.target.value);
     }

@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import logo from "../../../assets/img/logo.png"
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import HomeIcon from '@mui/icons-material/Home';
 import Portal from "../../../Components/Portal/Portal";
@@ -22,18 +21,16 @@ const Navbar = () => {
         options?setOptions(false):setOptions(true)
     }
     return (
-        <div className=" bg-red-400 fixed w-screen h-16 z-30 flex flex-row justify-around  " >
+        <div className=" bg-green-900 fixed w-screen h-16 z-30 flex flex-row justify-around  " >
             <div className="flex flex-row justify-start w-6/12 items-center ">
                 <Link className="w-16" to="/admin">
-                    <img className="h-16"  src={logo}/>
+                    <HomeIcon className="mx-8" fontSize="large"/>
                 </Link>
                 <input className="m-1 w-9/12 md:ml-20 px-4 h-3/6 md:w-3/6 " placeholder="Buscar" type="text"></input>
                 
             </div>
             <div className="flex flex-row justify-between items-center">
-              
-             
-                    <HomeIcon className="mx-8" fontSize="large"/>
+
                     <button onClick={onClickAccountHandler} ref={setReferenceElement}><AccountCircleIcon className="mr-8" fontSize="large"/></button>
                 
             
@@ -55,7 +52,6 @@ const Navbar = () => {
                         <BookmarkIcon className="mx-4" fontSize="large"/>
                         <button>Favoritos</button>
                     </div>
-               
                     <Link to="/login">
                         <div className="p-1.5 flex flex-row justify-start hover:bg-gray-400 rounded-b-lg ">
                             <LogoutIcon className="mx-4" fontSize="large"/>

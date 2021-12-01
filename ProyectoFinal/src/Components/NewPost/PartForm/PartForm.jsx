@@ -37,7 +37,7 @@ const PartForm = ({data}) => {
     }  
     return (
         <div className="w-full h-full flex flex-col gap-y-4 justify-around items-center">
-        <input name="url" className="w-4/5 h-8  px-4 rounded-md border border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Pega una URL"  {...data("image",{onChange: (e) =>  onChangeHandler(e)})}/>
+        <input name="url" className="w-4/5 h-8  px-4 rounded-md border border-transparent focus:outline-none focus:ring-2 focus:ring-gray-600 focus:border-transparent" placeholder="Pega una URL"  {...data("image",{onChange: (e) =>  onChangeHandler(e)})}/>
         {loading}
         <img src={img}/>
         <textarea className="w-4/5 resize-none border rounded-md p-1 " placeholder="Descripcion" {...data("description")}></textarea>
